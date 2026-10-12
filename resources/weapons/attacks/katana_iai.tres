@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/attack_data.gd" id="1_6572b"]
+
+[resource]
+script = ExtResource("1_6572b")
+attack_id = &"katana_iai"
+display_name = "重击·居合斩（蓄力满）"
+weapon_id = &"katana"
+windup = 0.22
+active = 0.16
+recovery = 0.74
+dodge_cancel_progress = 1.0
+attack_cancel_progress = 1.0
+damage = 80.0
+poise_damage = 50.0
+weight = 2
+hit_offset = Vector3(0, 1.2, -1.6)
+hit_half_length = 1.35
+hit_radius = 0.62
+hit_offset_end = Vector3(0, 1.1, -2.3)
+stamina_cost = 32.0
+lunge_speed = 9.0
+sfx_hit = &"hit_heavy"
+sfx_swing = &"swing_iai"
+vfx_hit = "res://scenes/fx/hit_spark_heavy.tscn"

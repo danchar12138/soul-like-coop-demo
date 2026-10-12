@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://csyncdebug001"]
+
+[ext_resource type="Script" path="res://tests/sync_debug.gd" id="1_sd"]
+
+[node name="SyncDebug" type="Node"]
+script = ExtResource("1_sd")

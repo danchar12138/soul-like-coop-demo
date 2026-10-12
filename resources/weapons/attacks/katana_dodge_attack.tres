@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/attack_data.gd" id="1_mlo2t"]
+
+[resource]
+script = ExtResource("1_mlo2t")
+attack_id = &"katana_dodge_attack"
+display_name = "闪避攻击·突进斩"
+weapon_id = &"katana"
+windup = 0.2
+active = 0.1
+recovery = 0.46
+damage = 24.0
+poise_damage = 14.0
+hit_offset = Vector3(0, 1.1, -1.45)
+hit_half_length = 1.05
+hit_radius = 0.5
+hit_offset_end = Vector3(0, 1.05, -1.85)
+stamina_cost = 20.0
+lunge_speed = 5.0
+sfx_hit = &"hit_light"
+sfx_swing = &"swing_light"

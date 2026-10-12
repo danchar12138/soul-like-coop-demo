@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/attack_data.gd" id="1_suajr"]
+
+[resource]
+script = ExtResource("1_suajr")
+attack_id = &"katana_light_2"
+display_name = "轻击·二之太刀"
+weapon_id = &"katana"
+windup = 0.26
+active = 0.1
+recovery = 0.36
+combo_window_open = 0.32
+combo_window_close = 0.82
+dodge_cancel_progress = 0.6
+attack_cancel_progress = 0.7
+damage = 21.0
+hit_offset = Vector3(0, 1.1, -1.35)
+hit_half_length = 1.0
+hit_radius = 0.52
+hit_rotation_deg = Vector3(0, 0, -14)
+hit_offset_end = Vector3(0, 1.15, -1.6)
+stamina_cost = 17.0
+lunge_speed = 2.0
+sfx_hit = &"hit_light"
+sfx_swing = &"swing_light"

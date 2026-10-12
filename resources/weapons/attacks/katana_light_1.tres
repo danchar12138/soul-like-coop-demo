@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/attack_data.gd" id="1_wnuag"]
+
+[resource]
+script = ExtResource("1_wnuag")
+attack_id = &"katana_light_1"
+display_name = "轻击·一之太刀"
+weapon_id = &"katana"
+windup = 0.3
+active = 0.1
+recovery = 0.34
+combo_window_open = 0.34
+combo_window_close = 0.8
+dodge_cancel_progress = 0.6
+attack_cancel_progress = 0.7
+damage = 18.0
+poise_damage = 10.0
+hit_offset = Vector3(0, 1.15, -1.3)
+hit_half_length = 0.95
+hit_radius = 0.5
+hit_rotation_deg = Vector3(0, 0, 12)
+hit_offset_end = Vector3(0, 1.05, -1.55)
+stamina_cost = 16.0
+lunge_speed = 1.6
+sfx_hit = &"hit_light"
+sfx_swing = &"swing_light"

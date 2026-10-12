@@ -1,0 +1,68 @@
+# Godot 引擎缓存与导入产物
+#
+# .godot/ 是引擎从零重新生成的（导入资源、类缓存、uid 映射），
+# 每次打开项目都会重建。它里面有本机绝对路径，换机器必然失效，
+# 所以绝对不能提交。
+.godot/
+
+# Godot 的资源导入副产物
+*.import.bak
+*.godot.import
+
+# ---------- 测试与工具的运行产物 ----------
+#
+# 这些是脚本自动生成的**结果**，不是源码。
+# 它们由 tests/*.gd 在运行时写入，允许手改就等于允许伪造测试结论。
+tests/测试结果.txt
+tests/模型校验结果.txt
+tests/动画校验结果.txt
+tests/音效校验结果.txt
+tests/性能结果.txt
+tests/性能上限探针.txt
+tests/性能最坏情况探针.txt
+
+# 联机测试的临时日志
+tests/_mp_logs/
+tests/_net_host.log
+tests/_net_client.log
+tests/_lan_host.log
+tests/_lan_client.log
+tests/_sd_host.log
+tests/_sd_client.log
+tests/_run_all_test.log
+
+# 一次性诊断脚本的运行残留
+tests/_*.log
+
+# Python 字节码（tools/*.py 被 Blender 调用时会生成）
+__pycache__/
+*.pyc
+*.pyo
+
+# ---------- Blender 备份 ----------
+#
+# Blender 每次保存都会把上一版重命名为 .blend1。
+# 那是本地历史，不是源文件。
+*.blend1
+*.blend2
+*.blend3
+
+# ---------- 操作系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ---------- 编辑器与 IDE ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------- 构建产物 ----------
+build/
+export/
+*.exe
+*.pck
+*.zip

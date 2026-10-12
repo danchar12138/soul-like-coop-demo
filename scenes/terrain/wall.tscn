@@ -1,0 +1,324 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/terrain/destructible_piece.gd" id="1_mu0gp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sa3sp"]
+resource_name = "BrickLow"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k30c7"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "BrickLow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1tkse"]
+resource_name = "wall_立方体"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_sa3sp"),
+"name": "BrickLow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k30c7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvf5k"]
+size = Vector3(0.8448, 0.5952, 0.44)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ao7wl"]
+resource_name = "BrickHigh"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3dvig"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "BrickHigh",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_25hmb"]
+resource_name = "wall_立方体_003"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_ao7wl"),
+"name": "BrickHigh",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3dvig")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_abony"]
+size = Vector3(0.8448, 0.5952, 0.44)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6kphi"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "BrickLow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bvrdl"]
+resource_name = "wall_立方体_001"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_sa3sp"),
+"name": "BrickLow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6kphi")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8vn2"]
+size = Vector3(0.8448, 0.5952, 0.44)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nkrsp"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "BrickHigh",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gg87n"]
+resource_name = "wall_立方体_004"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_ao7wl"),
+"name": "BrickHigh",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nkrsp")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6dpd"]
+size = Vector3(0.8448, 0.5952, 0.44)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ae8ud"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "BrickLow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dypnh"]
+resource_name = "wall_立方体_002"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_sa3sp"),
+"name": "BrickLow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ae8ud")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mcuko"]
+size = Vector3(0.8448, 0.5952, 0.44)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ra6fc"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "BrickHigh",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hp3es"]
+resource_name = "wall_立方体_005"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_ao7wl"),
+"name": "BrickHigh",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ra6fc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgfmh"]
+size = Vector3(0.8448, 0.5952, 0.44)
+
+[node name="Wall" type="StaticBody3D" unique_id=1863731702]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Piece0" type="StaticBody3D" parent="." unique_id=1554943167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88, 0.31, 0)
+script = ExtResource("1_mu0gp")
+structure_id = "wall"
+max_durability = 55.0
+durability = 55.0
+debris_count = 4
+
+[node name="Mesh" type="MeshInstance3D" parent="Piece0" unique_id=1314401021]
+transform = Transform3D(0.8448, 0, 0, 0, 0.5952, 0, 0, 0, 0.44, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1tkse")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece0" unique_id=950538309]
+shape = SubResource("BoxShape3D_qvf5k")
+
+[node name="Piece3" type="StaticBody3D" parent="." unique_id=886031743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88, 0.93, 0)
+script = ExtResource("1_mu0gp")
+structure_id = "wall"
+piece_index = 3
+max_durability = 42.0
+durability = 42.0
+debris_count = 4
+
+[node name="Mesh" type="MeshInstance3D" parent="Piece3" unique_id=1645171234]
+transform = Transform3D(0.8448, 0, 0, 0, 0.5952, 0, 0, 0, 0.44, 0, 0, 0)
+mesh = SubResource("ArrayMesh_25hmb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece3" unique_id=1559839667]
+shape = SubResource("BoxShape3D_abony")
+
+[node name="Piece1" type="StaticBody3D" parent="." unique_id=359100033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31, 0)
+script = ExtResource("1_mu0gp")
+structure_id = "wall"
+piece_index = 1
+max_durability = 55.0
+durability = 55.0
+debris_count = 4
+
+[node name="Mesh" type="MeshInstance3D" parent="Piece1" unique_id=887676005]
+transform = Transform3D(0.8448, 0, 0, 0, 0.5952, 0, 0, 0, 0.44, 0, 0, 0)
+mesh = SubResource("ArrayMesh_bvrdl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece1" unique_id=1732541326]
+shape = SubResource("BoxShape3D_c8vn2")
+
+[node name="Piece4" type="StaticBody3D" parent="." unique_id=842968698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93, 0)
+script = ExtResource("1_mu0gp")
+structure_id = "wall"
+piece_index = 4
+max_durability = 42.0
+durability = 42.0
+debris_count = 4
+
+[node name="Mesh" type="MeshInstance3D" parent="Piece4" unique_id=1507601485]
+transform = Transform3D(0.8448, 0, 0, 0, 0.5952, 0, 0, 0, 0.44, 0, 0, 0)
+mesh = SubResource("ArrayMesh_gg87n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece4" unique_id=1237926215]
+shape = SubResource("BoxShape3D_n6dpd")
+
+[node name="Piece2" type="StaticBody3D" parent="." unique_id=55720411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88, 0.31, 0)
+script = ExtResource("1_mu0gp")
+structure_id = "wall"
+piece_index = 2
+max_durability = 55.0
+durability = 55.0
+debris_count = 4
+
+[node name="Mesh" type="MeshInstance3D" parent="Piece2" unique_id=717139516]
+transform = Transform3D(0.8448, 0, 0, 0, 0.5952, 0, 0, 0, 0.44, 0, 0, 0)
+mesh = SubResource("ArrayMesh_dypnh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece2" unique_id=154759250]
+shape = SubResource("BoxShape3D_mcuko")
+
+[node name="Piece5" type="StaticBody3D" parent="." unique_id=351610033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88, 0.93, 0)
+script = ExtResource("1_mu0gp")
+structure_id = "wall"
+piece_index = 5
+max_durability = 42.0
+durability = 42.0
+debris_count = 4
+
+[node name="Mesh" type="MeshInstance3D" parent="Piece5" unique_id=1451984913]
+transform = Transform3D(0.8448, 0, 0, 0, 0.5952, 0, 0, 0, 0.44, 0, 0, 0)
+mesh = SubResource("ArrayMesh_hp3es")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece5" unique_id=6657017]
+shape = SubResource("BoxShape3D_dgfmh")

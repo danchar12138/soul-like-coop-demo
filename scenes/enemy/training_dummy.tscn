@@ -1,0 +1,113 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy/training_dummy.gd" id="1_70gfn"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox.gd" id="2_rqefm"]
+[ext_resource type="Script" path="res://scripts/combat/damageable.gd" id="3_pti33"]
+[ext_resource type="Script" path="res://scripts/combat/health_component.gd" id="4_sscln"]
+[ext_resource type="Script" path="res://scripts/combat/poise_component.gd" id="5_hlypu"]
+[ext_resource type="Script" path="res://scripts/combat/hit_reactor.gd" id="6_idpdo"]
+[ext_resource type="Script" path="res://scripts/core/character_state_machine.gd" id="7_xt8l1"]
+[ext_resource type="Script" path="res://scripts/combat/attack_controller.gd" id="8_o07yi"]
+[ext_resource type="Script" path="res://scripts/net/enemy_sync.gd" id="9_balv6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vwihw"]
+radius = 0.42
+height = 1.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu15e"]
+albedo_color = Color(0.72, 0.63, 0.42, 1)
+roughness = 0.85
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6gof1"]
+top_radius = 0.32
+bottom_radius = 0.38
+height = 1.3
+radial_segments = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4c3d"]
+albedo_color = Color(0.62, 0.54, 0.36, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_xuw3r"]
+size = Vector3(1.3, 0.14, 0.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wok1"]
+albedo_color = Color(0.85, 0.78, 0.58, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_8unoa"]
+size = Vector3(0.42, 0.42, 0.42)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wj2bg"]
+radius = 0.45
+height = 1.7
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aa3f4"]
+radius = 0.46
+height = 1.9
+
+[node name="TrainingDummy" type="CharacterBody3D" unique_id=1520024166]
+collision_layer = 4
+collision_mask = 33
+script = ExtResource("1_70gfn")
+
+[node name="@CollisionShape3D@11" type="CollisionShape3D" parent="." unique_id=383273927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("CapsuleShape3D_vwihw")
+
+[node name="Model" type="Node3D" parent="." unique_id=139528162]
+
+[node name="Body" type="MeshInstance3D" parent="Model" unique_id=312155787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+material_override = SubResource("StandardMaterial3D_mu15e")
+mesh = SubResource("CylinderMesh_6gof1")
+
+[node name="Arms" type="MeshInstance3D" parent="Model" unique_id=1134664466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32, 0)
+material_override = SubResource("StandardMaterial3D_t4c3d")
+mesh = SubResource("BoxMesh_xuw3r")
+
+[node name="Head" type="MeshInstance3D" parent="Model" unique_id=2137452298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72, 0)
+material_override = SubResource("StandardMaterial3D_4wok1")
+mesh = SubResource("BoxMesh_8unoa")
+
+[node name="Hitbox" type="Area3D" parent="." unique_id=1823717644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, -1.25)
+script = ExtResource("2_rqefm")
+attack_layer = 5
+target_layers = 34
+
+[node name="@CollisionShape3D@12" type="CollisionShape3D" parent="Hitbox" unique_id=1618619572]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_wj2bg")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=1881149970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_pti33")
+
+[node name="@CollisionShape3D@13" type="CollisionShape3D" parent="Hurtbox" unique_id=1609116086]
+shape = SubResource("CapsuleShape3D_aa3f4")
+
+[node name="Health" type="Node" parent="." unique_id=2006961194]
+script = ExtResource("4_sscln")
+max_health = 80.0
+health = 80.0
+
+[node name="Poise" type="Node" parent="." unique_id=535479451]
+script = ExtResource("5_hlypu")
+
+[node name="HitReactor" type="Node3D" parent="." unique_id=881041101]
+script = ExtResource("6_idpdo")
+
+[node name="StateMachine" type="Node" parent="." unique_id=60510098]
+script = ExtResource("7_xt8l1")
+
+[node name="AttackController" type="Node" parent="." unique_id=891768239]
+script = ExtResource("8_o07yi")
+
+[node name="EnemySync" type="Node" parent="." unique_id=1096797512]
+script = ExtResource("9_balv6")
